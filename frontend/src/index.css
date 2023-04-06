@@ -1,0 +1,33 @@
+/* TODO Add site wide styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #001321;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(21, 126, 224);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
