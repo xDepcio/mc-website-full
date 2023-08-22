@@ -1,7 +1,7 @@
-import {faFacebook, faDiscord, faYoutube, faTiktok, faInstagram} from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faDiscord, faYoutube, faTiktok, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect } from 'react'
-import {Link, useLocation} from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Footer() {
 
@@ -14,14 +14,14 @@ function Footer() {
             top: 0,
             left: 0,
             // behavior: 'smooth'
-          })
+        })
     }, [location])
 
     return (
         <div className='footer-wrapper'>
             <div className='upper-footer'>
                 <div className='left-upper-footer'>
-                    <img src='https://watermc.eu/_nuxt/img/logo.ea4a917.png'></img>
+                    <img src='/images/logo.png'></img>
                     <div className='left-upper-footer--info'>
                         <div className="left-upper-footer--ip">TEST<span>MC</span>.PL</div>
                         <div className="left-upper-footer--slogan">Największy serwer w Polsce</div>
@@ -30,11 +30,11 @@ function Footer() {
                 <div className='right-upper-footer'>
                     <h3>Dołącz do nas na</h3>
                     <ul>
-                        <li>Discord <FontAwesomeIcon icon={faDiscord}/></li>
-                        <li>Fecebook <FontAwesomeIcon icon={faFacebook}/></li>
-                        <li>TikTok <FontAwesomeIcon icon={faTiktok}/></li>
-                        <li>YouTube <FontAwesomeIcon icon={faYoutube}/></li>
-                        <li>Instagram <FontAwesomeIcon icon={faInstagram}/></li>
+                        <li>Discord <FontAwesomeIcon icon={faDiscord} /></li>
+                        <li>Fecebook <FontAwesomeIcon icon={faFacebook} /></li>
+                        <li>TikTok <FontAwesomeIcon icon={faTiktok} /></li>
+                        <li>YouTube <FontAwesomeIcon icon={faYoutube} /></li>
+                        <li>Instagram <FontAwesomeIcon icon={faInstagram} /></li>
                     </ul>
                 </div>
                 <div className='upper-footer-nav'>

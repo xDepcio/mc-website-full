@@ -2,33 +2,33 @@ import { Route, Routes, NavLink, Link } from 'react-router-dom';
 import Navigation from "./components/Navigation"
 import './MainPage.css'
 import { useEffect, useState } from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faCartShopping, faCrown, faD} from '@fortawesome/free-solid-svg-icons'
-import {faFacebook, faDiscord, faYoutube, faTiktok, faInstagram} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping, faCrown, faD } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faDiscord, faYoutube, faTiktok, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import EventCard from './components/EventCard';
 import { useDispatch, useSelector } from 'react-redux';
-import {getTop10, get20More} from './store/leaderboard'
+import { getTop10, get20More } from './store/leaderboard'
 import Footer from './components/Footer';
 
 const playerdata = {
     players: [
-        {nick: 'xDepcio', points: 1745},
-        {nick: 'Kajtoszek', points: 1567},
-        {nick: 'Mat', points: 1432},
-        {nick: 'xDepcio', points: 1745},
-        {nick: 'xDepcio', points: 1745},
-        {nick: 'xDepcio', points: 1745},
-        {nick: 'xDepcio', points: 1745},
-        {nick: 'xDepcio', points: 1745},
-        {nick: 'xDepcio', points: 1745},
-        {nick: 'xDepcio', points: 1745},
+        { nick: 'xDepcio', points: 1745 },
+        { nick: 'Kajtoszek', points: 1567 },
+        { nick: 'Mat', points: 1432 },
+        { nick: 'xDepcio', points: 1745 },
+        { nick: 'xDepcio', points: 1745 },
+        { nick: 'xDepcio', points: 1745 },
+        { nick: 'xDepcio', points: 1745 },
+        { nick: 'xDepcio', points: 1745 },
+        { nick: 'xDepcio', points: 1745 },
+        { nick: 'xDepcio', points: 1745 },
     ],
     guilds: [
-        {nick: 'TWIX', points: 2100},
-        {nick: 'BASE', points: 1964},
-        {nick: 'TWIX', points: 2100},
-        {nick: 'TWIX', points: 2100},
-        {nick: 'TWIX', points: 2100},
+        { nick: 'TWIX', points: 2100 },
+        { nick: 'BASE', points: 1964 },
+        { nick: 'TWIX', points: 2100 },
+        { nick: 'TWIX', points: 2100 },
+        { nick: 'TWIX', points: 2100 },
     ]
 }
 
@@ -92,7 +92,7 @@ function MainPage() {
             setAdditionalClass('')
         }, 1000)
 
-        if(leaderboardList.players.length === 0) {
+        if (leaderboardList.players.length === 0) {
             const res = await dispatch(get20More(1))
             const re2 = await dispatch(get20More(2))
             const re3 = await dispatch(get20More(3))
@@ -116,16 +116,16 @@ function MainPage() {
         <>
             <div className={`main-info-wrapper ${additionalClass}`}>
                 <div className="main-image">
-                    <img src="https://watermc.eu/_nuxt/img/logo.ea4a917.png"></img>
+                    <img src="/images/logo.png"></img>
                 </div>
                 <div className="main-info-content">
                     <div className="main-info-content--ip">TEST<span>MC</span>.PL</div>
                     <div className="main-info-content--slogan">Największy serwer w Polsce</div>
                     <div className="main-info-content--button-wrapper">
                         <Link to={'/shop'}>
-                        <button>Sklep
-                            <FontAwesomeIcon className='main-cart-icon' icon={faCartShopping}/>
-                        </button>
+                            <button>Sklep
+                                <FontAwesomeIcon className='main-cart-icon' icon={faCartShopping} />
+                            </button>
                         </Link>
                     </div>
                 </div>
@@ -143,10 +143,10 @@ function MainPage() {
                         // console.log('eloelo')
                         return (
                             <div className='single-row-in-table' key={i}>
-                                <div style={{fontSize: i === 9 ? 35 : ''}} className='in-table-rank'>{i+1}</div>
+                                <div style={{ fontSize: i === 9 ? 35 : '' }} className='in-table-rank'>{i + 1}</div>
                                 <Link className='name-link' to={`/leaderboards/${ele.nickname ? ele.nickname : ele.name}`}>
                                     <div className='player-image'>
-                                        <div style={{backgroundImage: `url(https://minotar.net/avatar/${ele.nickname}/50)`}}>
+                                        <div style={{ backgroundImage: `url(https://minotar.net/avatar/${ele.nickname}/50)` }}>
 
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@ function MainPage() {
                                 <Link className='name-link' to={`/leaderboards/${ele.nickname ? ele.nickname : ele.name}`}>
                                     <div className='in-table-nick'>
                                         {ele.nickname ? ele.nickname : ele.name}
-                                        {i == 0 && <FontAwesomeIcon className='top-1-icon' icon={faCrown}/>}
+                                        {i == 0 && <FontAwesomeIcon className='top-1-icon' icon={faCrown} />}
                                     </div>
                                 </Link>
                                 <div className='in-table-points'>{Math.floor(ele.points)} pkt.</div>
@@ -167,19 +167,19 @@ function MainPage() {
                 <h2>Eventy Serwerowe</h2>
             </div>
             <div className='events-outer-wrapper'>
-                <div style={{left: cardOffset}} className='events-inner-wrapper'>
+                <div style={{ left: cardOffset }} className='events-inner-wrapper'>
                     {eventsData.map((ele) => {
                         return <EventCard
-                        key={ele.day}
+                            key={ele.day}
                             day={ele.day}
                             description={ele.description}
                             title={ele.title}
-                        imageUrl={ele.imageUrl}
-                        selected={selectedEvent}
-                        onClick={() => {
-                            setCardOffset(ele.offset)
-                            setSelectedEvent(ele.day)
-                        }} />
+                            imageUrl={ele.imageUrl}
+                            selected={selectedEvent}
+                            onClick={() => {
+                                setCardOffset(ele.offset)
+                                setSelectedEvent(ele.day)
+                            }} />
                     })}
                 </div>
             </div>

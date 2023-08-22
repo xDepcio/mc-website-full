@@ -1,7 +1,7 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Navigation.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faCircle} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react'
 
 function Navigation() {
@@ -11,7 +11,7 @@ function Navigation() {
     useEffect(() => {
         const scrollInterval = setInterval(() => {
             // console.log(window.scrollY)
-            if(window.scrollY >= 100) {
+            if (window.scrollY >= 100) {
                 setNavScrolled('nav-scrolled')
             }
             else {
@@ -34,11 +34,11 @@ function Navigation() {
                 <nav>
                     <div className='logo-wrapper'>
                         <div className='logo-icon'>
-                            <img src='https://watermc.eu/_nuxt/img/logo.ea4a917.png'></img>
+                            <img src='/images/logo.png'></img>
                         </div>
                         <div className='logo-name'>TEST<span>MC</span>.PL</div>
                         <div className='status-icon-wrapper'>
-                            <FontAwesomeIcon className='status-icon' icon={faCircle}/>
+                            <FontAwesomeIcon className='status-icon' icon={faCircle} />
                         </div>
                         <div className='logo-online'>{onlineNum} online</div>
                     </div>
