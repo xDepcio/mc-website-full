@@ -34,10 +34,6 @@ router.get('/', async (req, res) => {
         include: [
             {
                 model: Guild,
-                // attributes: [
-                    // 'id',
-                    // 'name'
-                // ]
             }
         ],
         attributes: {
@@ -111,7 +107,7 @@ router.get('/search/:name', async (req, res) => {
     })
 
     let playerPos
-    if(player) {
+    if (player) {
         playerPos = await Player.count({
             where: {
                 points: {
@@ -121,7 +117,7 @@ router.get('/search/:name', async (req, res) => {
         })
     }
 
-    if(player === null) {
+    if (player === null) {
         const guild = await Guild.findOne({
             where: {
                 name: req.params.name
@@ -136,7 +132,7 @@ router.get('/search/:name', async (req, res) => {
                 }
             }
         })
-        if(guild === null) {
+        if (guild === null) {
             res.json({
                 error: 'not-found',
                 message: 'Gracz lub Gildia z taką nazwą nie istnieje'
@@ -161,7 +157,7 @@ router.get('/search/:name', async (req, res) => {
         const guildMasters = []
 
         guild.dataValues.Players.forEach((ele) => {
-            switch(ele.dataValues.guildRank) {
+            switch (ele.dataValues.guildRank) {
                 case 'leader': {
                     guildLeaders.push(ele.dataValues)
                     break
