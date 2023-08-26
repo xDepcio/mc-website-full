@@ -98,7 +98,6 @@ function MainPage() {
             const re3 = await dispatch(get20More(3))
             // console.log('res', res)
         }
-        // const res = await fetch('http://localhost:8000/api/leaderboards/top')
         // console.log('res', await res.json())
 
     }, [])

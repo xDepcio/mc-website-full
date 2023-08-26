@@ -60,7 +60,7 @@ const loadGuildDeaths = (data) => {
 
 // thunk action creator
 export const getTop10 = () => async (dispatch) => {
-  const response = await fetch('http://localhost:8000/api/leaderboards/top');
+  const response = await fetch('/api/leaderboards/top');
 
   if (response.ok) {
     const data = await response.json();
@@ -71,7 +71,7 @@ export const getTop10 = () => async (dispatch) => {
 };
 
 export const get20More = (currentPage) => async (dispatch) => {
-  const response = await fetch(`http://localhost:8000/api/leaderboards?page=${currentPage}`)
+  const response = await fetch(`/api/leaderboards?page=${currentPage}`)
 
   if (response.ok) {
     const data = await response.json();
@@ -82,7 +82,7 @@ export const get20More = (currentPage) => async (dispatch) => {
 }
 
 export const getEntry = (name) => async (dispatch) => {
-  const response = await fetch(`http://localhost:8000/api/leaderboards/search/${name}`)
+  const response = await fetch(`/api/leaderboards/search/${name}`)
 
   if (response.ok) {
     const data = await response.json();
@@ -94,9 +94,9 @@ export const getEntry = (name) => async (dispatch) => {
 }
 
 export const getPlayerKills = (id) => async (dispatch) => {
-  const response = await fetch(`http://localhost:8000/api/leaderboards/players/${id}/kills`)
+  const response = await fetch(`/api/leaderboards/players/${id}/kills`)
 
-  if(response.ok) {
+  if (response.ok) {
     const data = await response.json();
 
     dispatch(loadPlayerKills(data));
@@ -106,9 +106,9 @@ export const getPlayerKills = (id) => async (dispatch) => {
 }
 
 export const getPlayerDeaths = (id) => async (dispatch) => {
-  const response = await fetch(`http://localhost:8000/api/leaderboards/players/${id}/deaths`)
+  const response = await fetch(`/api/leaderboards/players/${id}/deaths`)
 
-  if(response.ok) {
+  if (response.ok) {
     const data = await response.json();
 
     dispatch(loadPlayerDeaths(data));
@@ -124,9 +124,9 @@ export const getPlayerStats = (id) => async (dispatch) => {
 
 // get guild stats
 export const getGuildKills = (id) => async (dispatch) => {
-  const response = await fetch(`http://localhost:8000/api/leaderboards/guilds/${id}/kills`)
+  const response = await fetch(`/api/leaderboards/guilds/${id}/kills`)
 
-  if(response.ok) {
+  if (response.ok) {
     const data = await response.json();
 
     dispatch(loadGuildKills(data));
@@ -136,9 +136,9 @@ export const getGuildKills = (id) => async (dispatch) => {
 }
 
 export const getGuildDeaths = (id) => async (dispatch) => {
-  const response = await fetch(`http://localhost:8000/api/leaderboards/guilds/${id}/deaths`)
+  const response = await fetch(`/api/leaderboards/guilds/${id}/deaths`)
 
-  if(response.ok) {
+  if (response.ok) {
     const data = await response.json();
 
     dispatch(loadGuildDeaths(data));
@@ -178,15 +178,15 @@ export const getGuildStats = (id) => async (dispatch) => {
 // }
 
 // state object
-const initialState = {players: [], guilds: []};
+const initialState = { players: [], guilds: [] };
 
 // reducer
 const leaderboardReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_TOP_10: {
-      const newState = {...state};
+      const newState = { ...state };
       // console.log('action.topPointsData', action.topPointsData)
-      const {players, guilds} = action.topPointsData
+      const { players, guilds } = action.topPointsData
       // console.log('DATA', players, guilds)
       newState.players = players
       newState.guilds = guilds.map((ele) => {
@@ -198,8 +198,8 @@ const leaderboardReducer = (state = initialState, action) => {
       return newState;
     }
     case LOAD_20_MORE: {
-      const newState = {...state}
-      const {players, guilds, totalPlayers, totalGuilds} = action.more20Players
+      const newState = { ...state }
+      const { players, guilds, totalPlayers, totalGuilds } = action.more20Players
       newState.players = [...newState.players, ...players]
       newState.guilds = [...newState.guilds, ...guilds.map((ele) => {
         console.log(ele)
@@ -214,30 +214,30 @@ const leaderboardReducer = (state = initialState, action) => {
       return newState
     }
     case LOAD_ENTRY: {
-      const newState = {...state}
+      const newState = { ...state }
       newState.searchResult = action.searchResult
       // console.log('NEW STATICK', newState)
       return newState
     }
     case LOAD_KILLS: {
-      const newState = {...state}
+      const newState = { ...state }
       newState.kills = action.kills
       // console.log('NEWSTA IS====', newState)
       return newState
     }
     case LOAD_DEATHS: {
-      const newState = {...state}
+      const newState = { ...state }
       newState.deaths = action.deaths
       // console.log('NEWSTA IS====', newState)
       return newState
     }
     case LOAD_GUILD_KILLS: {
-      const newState = {...state}
+      const newState = { ...state }
       newState.guildKills = action.kills
       return newState
     }
     case LOAD_GUILD_DEATHS: {
-      const newState = {...state}
+      const newState = { ...state }
       newState.guildDeaths = action.deaths
       return newState
     }
