@@ -115,7 +115,7 @@ function MainPage() {
         <>
             <div className={`main-info-wrapper ${additionalClass}`}>
                 <div className="main-image">
-                    <img src="/images/logo.png"></img>
+                    <img src="https://mc-server-website-nextjs13.vercel.app/images/logo.png"></img>
                 </div>
                 <div className="main-info-content">
                     <div className="main-info-content--ip">TEST<span>MC</span>.PL</div>

@@ -34,7 +34,7 @@ function Navigation() {
                 <nav>
                     <div className='logo-wrapper'>
                         <div className='logo-icon'>
-                            <img src='/images/logo.png'></img>
+                            <img src='https://mc-server-website-nextjs13.vercel.app/images/logo.png'></img>
                         </div>
                         <div className='logo-name'>TEST<span>MC</span>.PL</div>
                         <div className='status-icon-wrapper'>

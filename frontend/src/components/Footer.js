@@ -21,7 +21,7 @@ function Footer() {
         <div className='footer-wrapper'>
             <div className='upper-footer'>
                 <div className='left-upper-footer'>
-                    <img src='/images/logo.png'></img>
+                    <img src='https://mc-server-website-nextjs13.vercel.app/images/logo.png'></img>
                     <div className='left-upper-footer--info'>
                         <div className="left-upper-footer--ip">TEST<span>MC</span>.PL</div>
                         <div className="left-upper-footer--slogan">Największy serwer w Polsce</div>

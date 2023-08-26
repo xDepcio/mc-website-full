@@ -3,25 +3,25 @@ import './KitPreview.css'
 
 const vipKitData = [
     {
-        backgroundImageUrl: '/images/Iron_Helmet.png',
+        backgroundImageUrl: 'https://mc-server-website-nextjs13.vercel.app/images/Iron_Helmet.png',
         name: 'Zelazny helm',
         enchants: ['Protection IV', 'Unbreaking III'],
         amount: 2
     },
     {
-        backgroundImageUrl: '/images/Iron_Chestplate.png',
+        backgroundImageUrl: 'https://mc-server-website-nextjs13.vercel.app/images/Iron_Chestplate.png',
         name: 'Zelazny Napiersnik',
         enchants: ['Protection IV', 'Unbreaking III'],
         amount: 2
     },
     {
-        backgroundImageUrl: '/images/Iron_Leggings.png',
+        backgroundImageUrl: 'https://mc-server-website-nextjs13.vercel.app/images/Iron_Leggings.png',
         name: 'Zelazne spodnie',
         enchants: ['Protection IV', 'Unbreaking III'],
         amount: 2
     },
     {
-        backgroundImageUrl: '/images/Iron_Boots.png',
+        backgroundImageUrl: 'https://mc-server-website-nextjs13.vercel.app/images/Iron_Boots.png',
         name: 'Zelazny Buty',
         enchants: ['Protection IV', 'Unbreaking III'],
         amount: 2

@@ -6,7 +6,7 @@ function ChestsDesc({ amount }) {
                 na serwerze pod komendą /odbierz</p>
             {amount === 16 && (
                 <div style={{
-                    backgroundImage: `url('/images/Chest.png')`,
+                    backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                     backgroundSize: 'cover',
                     width: '120px',
                     height: '120px',
@@ -17,7 +17,7 @@ function ChestsDesc({ amount }) {
             {amount === 32 && (
                 <>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'cover',
                         width: '120px',
                         height: '120px',
@@ -29,7 +29,7 @@ function ChestsDesc({ amount }) {
                         // bottom: '30px'
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'cover',
                         width: '120px',
                         height: '120px',
@@ -44,7 +44,7 @@ function ChestsDesc({ amount }) {
             {amount === 64 && (
                 <>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '120px',
                         height: '120px',
@@ -54,7 +54,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 1,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '120px',
                         height: '120px',
@@ -64,7 +64,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 2,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '120px',
                         height: '120px',
@@ -78,7 +78,7 @@ function ChestsDesc({ amount }) {
             {amount === 128 && (
                 <>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '80px',
                         height: '80px',
@@ -88,7 +88,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 1,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '80px',
                         height: '80px',
@@ -98,7 +98,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 0,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '80px',
                         height: '80px',
@@ -108,7 +108,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 2,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Ender_Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Ender_Chest.png')`,
                         backgroundSize: 'contain',
                         width: '90px',
                         height: '90px',
@@ -122,7 +122,7 @@ function ChestsDesc({ amount }) {
             {amount === 256 && (
                 <>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '75px',
                         height: '75px',
@@ -132,7 +132,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 1,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Ender_Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Ender_Chest.png')`,
                         backgroundSize: 'contain',
                         width: '75px',
                         height: '75px',
@@ -142,7 +142,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 2,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Ender_Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Ender_Chest.png')`,
                         backgroundSize: 'contain',
                         width: '75px',
                         height: '75px',
@@ -152,7 +152,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 0,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '70px',
                         height: '70px',
@@ -162,7 +162,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 3,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '70px',
                         height: '70px',
@@ -176,7 +176,7 @@ function ChestsDesc({ amount }) {
             {amount === 512 && (
                 <>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '75px',
                         height: '75px',
@@ -186,7 +186,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 1,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Ender_Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Ender_Chest.png')`,
                         backgroundSize: 'contain',
                         width: '75px',
                         height: '75px',
@@ -196,7 +196,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 2,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Ender_Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Ender_Chest.png')`,
                         backgroundSize: 'contain',
                         width: '75px',
                         height: '75px',
@@ -206,7 +206,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 1,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '70px',
                         height: '70px',
@@ -216,7 +216,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 3,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Chest.png')`,
                         backgroundSize: 'contain',
                         width: '70px',
                         height: '70px',
@@ -226,7 +226,7 @@ function ChestsDesc({ amount }) {
                         zIndex: 3,
                     }}></div>
                     <div style={{
-                        backgroundImage: `url('/images/Ender_Chest.png')`,
+                        backgroundImage: `url('https://mc-server-website-nextjs13.vercel.app/images/Ender_Chest.png')`,
                         backgroundSize: 'contain',
                         width: '70px',
                         height: '70px',

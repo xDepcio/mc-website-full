@@ -60,7 +60,7 @@ const loadGuildDeaths = (data) => {
 
 // thunk action creator
 export const getTop10 = () => async (dispatch) => {
-  const response = await fetch('/api/leaderboards/top');
+  const response = await fetch('https://mc-server-website-nextjs13.vercel.app/api/leaderboards/top');
 
   if (response.ok) {
     const data = await response.json();
@@ -71,7 +71,7 @@ export const getTop10 = () => async (dispatch) => {
 };
 
 export const get20More = (currentPage) => async (dispatch) => {
-  const response = await fetch(`/api/leaderboards?page=${currentPage}`)
+  const response = await fetch(`https://mc-server-website-nextjs13.vercel.app/api/leaderboards?page=${currentPage}`)
 
   if (response.ok) {
     const data = await response.json();
@@ -82,7 +82,7 @@ export const get20More = (currentPage) => async (dispatch) => {
 }
 
 export const getEntry = (name) => async (dispatch) => {
-  const response = await fetch(`/api/leaderboards/search/${name}`)
+  const response = await fetch(`https://mc-server-website-nextjs13.vercel.app/api/leaderboards/search/${name}`)
 
   if (response.ok) {
     const data = await response.json();
@@ -94,7 +94,7 @@ export const getEntry = (name) => async (dispatch) => {
 }
 
 export const getPlayerKills = (id) => async (dispatch) => {
-  const response = await fetch(`/api/leaderboards/players/${id}/kills`)
+  const response = await fetch(`https://mc-server-website-nextjs13.vercel.app/api/leaderboards/players/${id}/kills`)
 
   if (response.ok) {
     const data = await response.json();
@@ -106,7 +106,7 @@ export const getPlayerKills = (id) => async (dispatch) => {
 }
 
 export const getPlayerDeaths = (id) => async (dispatch) => {
-  const response = await fetch(`/api/leaderboards/players/${id}/deaths`)
+  const response = await fetch(`https://mc-server-website-nextjs13.vercel.app/api/leaderboards/players/${id}/deaths`)
 
   if (response.ok) {
     const data = await response.json();
@@ -124,7 +124,7 @@ export const getPlayerStats = (id) => async (dispatch) => {
 
 // get guild stats
 export const getGuildKills = (id) => async (dispatch) => {
-  const response = await fetch(`/api/leaderboards/guilds/${id}/kills`)
+  const response = await fetch(`https://mc-server-website-nextjs13.vercel.app/api/leaderboards/guilds/${id}/kills`)
 
   if (response.ok) {
     const data = await response.json();
@@ -136,7 +136,7 @@ export const getGuildKills = (id) => async (dispatch) => {
 }
 
 export const getGuildDeaths = (id) => async (dispatch) => {
-  const response = await fetch(`/api/leaderboards/guilds/${id}/deaths`)
+  const response = await fetch(`https://mc-server-website-nextjs13.vercel.app/api/leaderboards/guilds/${id}/deaths`)
 
   if (response.ok) {
     const data = await response.json();
@@ -163,7 +163,7 @@ export const getGuildStats = (id) => async (dispatch) => {
 // POST new tweet (thunk action creator)
 // export function postTweet(tweet) {
 //   return async function thunk(dispatch) {
-//     const respone = await fetch('/api/tweets', {
+//     const respone = await fetch('https://mc-server-website-nextjs13.vercel.app/api/tweets', {
 //       method: 'POST',
 //       body: JSON.stringify(tweet),
 //       headers: {'Content-Type': 'application/json'}
